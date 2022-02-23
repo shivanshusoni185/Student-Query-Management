@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js" > </script>
+ 
+    <meta charset="utf-8">
+	
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    
+    
+    
+    </head>
+    <body>
+        <script>
+    $(document).ready(function() {
+        function disableBack() { window.history.forward() }
+
+        window.onload = disableBack();
+        window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
+    });
+</script>
+
+
+
+
+  <form action="./UserCheck">
+
+
+
+
+
+
+<div class="container">
+		<div class="top">
+			<h1 id="title" class="hidden"><span id="logo">Student  <span> Question Forum</span></span></h1>
+		</div>
+		<div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>Log In</h2>
+			</div>
+			<label for="username">Email</label>
+			<br/>
+			<input type="email" name="email"
+                               required  id="username">
+			<br/>
+			<label for="password">Password</label>
+			<br/>
+			<input type="password" name="pass" 
+                               required id="password"/>
+			<br/>
+			<input type="Submit" value="Sign In" 
+                               name="b1"  />
+			<br/>
+			<a href="reg.jsp"><p class="small">
+                                New Registration?</p></a>
+		</div>
+	</div>
+      </form>
+</body>
+
+<script>
+	$(document).ready(function () {
+    	$('#logo').addClass('animated fadeInDown');
+    	$("input:text:visible:first").focus();
+	});
+	$('#username').focus(function() {
+		$('label[for="username"]').addClass('selected');
+	});
+	$('#username').blur(function() {
+		$('label[for="username"]').removeClass('selected');
+	});
+	$('#password').focus(function() {
+		$('label[for="password"]').addClass('selected');
+	});
+	$('#password').blur(function() {
+		$('label[for="password"]').removeClass('selected');
+	});
+</script>
+
+</html>
